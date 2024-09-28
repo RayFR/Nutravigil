@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',
+    'corsheaders', # CORS (Cross-Origin Resource SHaring) allows for requests from different domains (such as REACT)
+    'rest_framework',
     'myapp',
 ]
 
