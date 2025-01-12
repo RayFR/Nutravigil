@@ -141,7 +141,7 @@ html, body {
 }
 
 .variable-stats {
-  width: 60vw;
+  width: 45%;
   height: 90%; /* Full height for scrolling content */
   display: flex;
   flex-direction: column;
@@ -230,8 +230,7 @@ html, body {
 
 .custom-food-form {
   background-color: var(--box-color);
-  padding: 20px;
-  border-radius: 10px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -247,6 +246,8 @@ html, body {
 .custom-food-form form {
   width: 100%;
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-row {
@@ -254,6 +255,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .form-row label {
@@ -301,14 +303,18 @@ html, body {
   align-items: center;
   justify-content: center;
   background-color: var(--box-color);
+  padding-left: 30px;
+  padding-right: 30px;
+  gap: 20px;
 }
 
 .stat-box {
   width: 80%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
-  margin-bottom: 50px;
 }
 
 .stat {
@@ -322,21 +328,28 @@ html, body {
 
 .calorie-calc {
   border: 1px solid var(--text-color);
-  padding: 30px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .calorie-calc .stat {
   border: none;
+  height: 70px;
+}
+
+.calorie-calc .stat p {
+  width: 100px;
+  text-align: center;
+  align-self: center;
 }
 
 .goal-settings {
   background-color: var(--box-color);
   padding: 20px;
-  border-radius: 10px;
   color: var(--text-color);
   width: 45%;
   display: flex;
@@ -392,6 +405,7 @@ html, body {
   font-size: 14px;
   cursor: pointer;
   margin-top: 20px;
+  align-self: center;
 }
 
 .reset-button:hover {
@@ -404,3 +418,5 @@ html, body {
   text-align: center;
   justify-content: center;
 }
+
+
