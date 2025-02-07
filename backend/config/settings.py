@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'api',
     'rest_framework', # django REST framework
     'corsheaders', # (CROSS ORIGIN RESOURCE SHARING) -> NEEDED FOR THE FRONTEND AND BACKEND CROSS FUNCTIONALITY WHEN ON SEPARATE DOMAINS
+    'requests',
 ]
 
 MIDDLEWARE = [
