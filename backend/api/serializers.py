@@ -5,3 +5,8 @@ class ItemSerializer(serializers.ModelSerializer): # converts items into JSON da
     class Meta:
         model = Item
         fields = '__all__'
+
+class FoodSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Food
+        fields = '__all__'
