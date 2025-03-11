@@ -5,7 +5,8 @@ import ItemList from "./pages/items";
 function App() {
     return (
         <>
-            <ItemList />
+            <FixedStats />
+            <VariableStats />
         </>
     );
 }
