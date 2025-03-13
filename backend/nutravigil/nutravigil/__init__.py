@@ -5,11 +5,10 @@ from flask_cors import CORS
 
 from nutravigil.models import db
 from nutravigil.routes import routes 
+from nutravigil.config import ApplicationConfig
 
 app = Flask(__name__)
+app.config.from_object(ApplicationConfig)
 CORS(app)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1144@localhost/nutravigil_db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
