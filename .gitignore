@@ -1,0 +1,15 @@
+# bytecode and cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# other
+.env
+poetry.lock
+
+# logs and debugging
+*.log
+debug.log
+
+# docker
+Dockerfile
