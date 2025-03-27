@@ -1,6 +1,13 @@
+import { useEffect, useState } from "react";
 import "../App.css";
 
 const AddFoodTab = () => {
+    const [foods, setFoods] = useState([]);
+
+    useEffect(() => {
+        fetch("http://127.0.0.1:5000/get_foods")
+    })
+
     return (
         <div className="add-food-section">
             <div className="add-existing-food">
