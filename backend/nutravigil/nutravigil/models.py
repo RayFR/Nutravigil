@@ -4,7 +4,6 @@ from flask_login import UserMixin
 
 import bcrypt
 
-
 db = SQLAlchemy()
 
 # CREATE A UUID 

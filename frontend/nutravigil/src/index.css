@@ -3,6 +3,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">);
 
 :root {
+  --primary: #2B2B2D;
+  --secondary: #D9D9D9;
+  --secondary-2: #232323;
+  --accent: #FFFFFF;
+  --text: #FFFFFF;
+  --error: #F32929;
+
+  --font-350: calc(var(--font-400) - .125rem);
+  --font-400: 1rem;
+  --font-500: calc(var(--font-400) + .125rem);
+  --font-700: calc(var(--font-400) + .5rem);
+  --font-800: calc(var(--font-400) + 1.25rem);
+  --font-900: calc(var(--font-400) + 1.5rem);
+}
+
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;

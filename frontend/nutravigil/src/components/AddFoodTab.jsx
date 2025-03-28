@@ -5,7 +5,8 @@ const AddFoodTab = () => {
     const [foods, setFoods] = useState([]);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:5000/get_foods")
+        fetch("http://127.0.0.1:5000/search_food")
+        .then
     })
 
     return (

@@ -4,7 +4,7 @@ from flask_login import login_required, logout_user, login_user, current_user
 
 auth = Blueprint("auth", __name__)
 
-@auth.route("/get_user/<int:id>", methods['GET'])
+@auth.route("/get_user/<int:id>", methods=['GET'])
 def get_user(id):
     user = User.query.get_or_404(id)
     return jsonify({
@@ -38,7 +38,23 @@ def signup():
 
 @auth.route("/login", methods=['POST'])
 def login():
-    pass
+    email = request.json.get("email")
+    password = request.json.get("password")
+
+    user = User.query.filter_by(email=email).first()
+
+    if not user:
+        return jsonify({"error": "user does not exist"}), 401
+    
+    if not user.check_password(password):
+        return jsonify({"error": "password does not match"}), 401
+
+    if current_user:
+        logout_user()
+
+    login_user(user, remember=True)
+
+    return jsonify({"success": "successful login"}), 201
 
 @auth.route("/logout", methods=['GET'])
 @login_required
@@ -49,5 +65,5 @@ def logout():
 @auth.route("/is_authenticated", methods=['GET'])
 @login_required
 def is_authenticated():
-    pass
+    return jsonify(True), 200
 
